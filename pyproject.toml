@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "tic-tac-toe-python"
+version = "0.1.0"
+description = "Websocket engine for Tic Tac Toe Game"
+authors = ["alexeykudimov <work.alexeykudimov@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.79.0"
+uvicorn = "^0.18.2"
+SQLAlchemy = "^1.4.40"
+psycopg2-binary = "^2.9.3"
+PyJWT = "^2.4.0"
+aioredis = "^2.0.1"
+python-dotenv = "^0.20.0"
+aiohttp = "^3.8.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,9 @@
+# Ignore IDE config.
+.idea
+.vscode
+
+# MacOS
+.DS_Store
+
+# dotenv environment variables file
+.env
