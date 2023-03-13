@@ -12,6 +12,7 @@ router = APIRouter()
 @router.post(
     "",
     name="Leave claim",
+    response_model=MessageOut,
     status_code=200)
 async def leave_claim(
     payload: ClaimIn, claim_service: ClaimService = Depends()):
