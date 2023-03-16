@@ -8,6 +8,7 @@ services:
       - .env
     volumes:
       - .:/app
+      - /home/sf/media:/home/media
     entrypoint: python src/main.py
     ports:
       - "8000:8000"
