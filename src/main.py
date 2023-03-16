@@ -4,6 +4,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 import uvicorn
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from sqladmin import Admin
 from src.admin import get_auth_backend, init_models
@@ -24,6 +25,7 @@ app = FastAPI(
     docs_url=f'/docs',
     redoc_url=f'/redoc')
 
+app.mount("/static", StaticFiles(directory=settings.STATIC_PATH), name="static")
 app.include_router(routers.api_router, prefix=settings.API_PREFIX)
 
 admin = Admin(app, engine, title='StackForceAdmin', authentication_backend=get_auth_backend())

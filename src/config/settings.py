@@ -23,6 +23,8 @@ class Settings(BaseSettings):
 
     ADMIN_PAGE_SIZE: int
 
+    STATIC_PATH: str = 'static'
+
     class Config:
         env_file_encoding = 'utf-8'
 
