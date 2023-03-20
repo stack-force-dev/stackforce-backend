@@ -1,7 +1,9 @@
 import logging
 
-from fastapi import Depends, HTTPException
+from fastapi import Depends, HTTPException, File, UploadFile
 from sqlalchemy.orm import Session
+
+from typing import Annotated
 
 from src.misc import dependencies
 
@@ -26,3 +28,7 @@ class ClaimService:
             raise HTTPException(detail=f"Error => {e}", status_code=500)
             
         return {"message": "Claim successfully saved!"}
+    
+    async def attach_file(self, file: Annotated[bytes, File()]):
+        print(file)
+
