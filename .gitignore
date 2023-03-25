@@ -4,6 +4,8 @@ logs/
 firmware/
 media/
 
+docker-compose.yml
+
 launch.json
 
 ### Python template
