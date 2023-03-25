@@ -1,6 +1,3 @@
-from typing import List
-from uuid import UUID
-
 from pydantic import BaseModel
 
 
@@ -16,4 +13,4 @@ class ClaimIn(BaseModel):
     is_adaptive: bool | None
     state: str | None
     start_date: str | None
-
+    file: str | None
