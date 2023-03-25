@@ -29,7 +29,12 @@ def write_b64_file(b64_string: str, folder_name: str):
         file_name += extension
 
     b64_bytes = b64_string.encode('utf-8')
-    new_file_path = os.path.join(settings.STATIC_PATH, 'claim', folder_name, file_name)
+
+    folder_path = os.path.join(settings.STATIC_PATH, 'claim', folder_name)
+    if not os.path.exists(folder_path):
+        os.mkdir(folder_path)
+
+    new_file_path = os.path.join(folder_path, file_name)
     
     with open(new_file_path, "wb") as file:
         decoded_data = base64.decodebytes(b64_bytes)
