@@ -1,3 +1,4 @@
+from typing import List
 from pydantic import BaseModel
 
 
@@ -13,4 +14,4 @@ class ClaimIn(BaseModel):
     is_adaptive: bool | None
     state: str | None
     start_date: str | None
-    file: str | None
+    files: List[str] | None
