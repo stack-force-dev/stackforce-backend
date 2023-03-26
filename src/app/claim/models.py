@@ -17,7 +17,7 @@ class Claim(ModelBase):
     phone = Column(String(255), nullable=True)
     message = Column(Text, nullable=True)
     type = Column(Text, nullable=True)
-    is_adaptive = Column(Boolean, nullable=True)
+    is_adaptive = Column(Text, nullable=True)
     state = Column(Text, nullable=True)
     start_date = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)

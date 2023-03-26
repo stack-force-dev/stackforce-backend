@@ -11,7 +11,7 @@ class ClaimIn(BaseModel):
     phone: str | None
     message: str | None
     type: str | None
-    is_adaptive: bool | None
+    is_adaptive: str | None
     state: str | None
     start_date: str | None
     files: List[str] | None
