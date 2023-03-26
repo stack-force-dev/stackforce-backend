@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 class Claim(ModelBase):
     __tablename__ = "claims"
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name = Column(String(127), nullable=True)
     email = Column(String(255), nullable=True)
     phone = Column(String(255), nullable=True)
     message = Column(Text, nullable=True)

@@ -7,6 +7,7 @@ class MessageOut(BaseModel):
 
 
 class ClaimIn(BaseModel):
+    name: str | None
     email: str | None
     phone: str | None
     message: str | None
